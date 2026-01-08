@@ -3,39 +3,42 @@ layout: default
 title: Home
 ---
 
-# CakeIsGoodForYou Projects
+# About Me (Andy Clynes)
 
-Portfolio of production-ready infrastructure and AI engineering projects.
+My name is Andy Clynes and I am a data, analytics, devOps and GenAI professional with over 10 years industry experience.
+Starting in data analytics and data science I later transitioned into data engineering and then again into operations engineering / devOps
+in order to get the complete end-to-end data and analytics stack experience.
 
----
-
-## Featured Project: S3 Vectors URL Embed
-
-**Production-ready AWS Bedrock Knowledge Base with 90% cost reduction**
-
-A complete Infrastructure-as-Code solution for building RAG systems using S3 Vectors instead of OpenSearch Serverless.
-
-[View Project →](s3-vectors-url-embed)
-
-### Highlights
-- 🚀 Deploy with one command (`terraform apply`)
-- 💰 Reduces costs from $35-40/month to ~$2-5/month
-- 🔧 Production-ready: Security, monitoring, error handling
-- 📚 Automatically ingests web documentation for RAG queries
-
-### Tech Stack
-AWS Bedrock • S3 Vectors • Lambda • Terraform • Python 3.12
-
----
-
-## About
-
-Senior Data Engineer transitioning to AI Engineering. Building production-grade GenAI systems with cost optimization and best practices.
-
-**Currently**: Studying for AWS Certified AI Practitioner & GenAI Developer Professional
+Recently I have also expanded into AI engineering and this page is designed to showcase some interesting projects I have been developing.
 
 [GitHub](https://github.com/cakeisgoodforyou) • [LinkedIn](#)
 
+## Featured Projects
 ---
 
+### s3vectors-url-embed
+
+**A Complete Infrastructure as Code Deployment for a RAG Vector Store Using AWS Bedrock and s3 Vectors.
+
+### Highlights
+- 💥 Automatically retrieve, process, and embed web docs / URLS for RAG systems 
+- ☁️ Native AWS solution using Bedrock Knowledge-Bases, s3-Vectors and Lambda
+- 💰 s3-Vectors drastically reduces storage costs vs traditional OpenSearch vector store
+- 🥳 Low maintenance ingestion and embedding using Bedrock sync data source feature
+- 📚 Includes lambda function to crawl and parse a given URL into  appropriately sized and cleanly formatted chunks for embedding
+- 🔧 Production-ready: Safe and secure with logging, monitoring and error handling
+- 🚀 Easy deployment with no hard-coded variables and simple to read, low complexity terraform
+
+[View Project →](s3-vectors-url-embed)
+[View Architecture →](s3-vectors-url-embed-architecture)
+
+#### Tags
+AWS Bedrock • S3 Vectors • Lambda • Terraform • Python 3.12
+
 *Last updated: January 2025*
+
+---
+
+### xyz
+
+**TBC...
