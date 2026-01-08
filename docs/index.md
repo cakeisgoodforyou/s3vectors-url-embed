@@ -29,8 +29,11 @@ Recently I have also expanded into AI engineering and this page is designed to s
 - 🔧 Production-ready: Safe and secure with logging, monitoring and error handling
 - 🚀 Easy deployment with no hard-coded variables and simple to read, low complexity terraform
 
-[View Project →](s3-vectors-url-embed)
-[View Architecture →](s3-vectors-url-embed-architecture)
+#### Links
+
+- [Project Details→](s3-vectors-url-embed)
+- [Architecture →](s3-vectors-url-embed-architecture)
+- [Code →](https://github.com/cakeisgoodforyou/s3vectors-url-embed)
 
 #### Tags
 AWS Bedrock • S3 Vectors • Lambda • Terraform • Python 3.12
