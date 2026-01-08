@@ -173,8 +173,113 @@ hr {
   text-decoration: none;
 }
 
+/* Sidebar sections */
+.sidebar-section {
+  text-align: left;
+  margin-top: 2em;
+  padding-top: 1.5em;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.sidebar-section h4 {
+  color: white;
+  font-size: 1.1em;
+  margin: 0 0 0.8em 0;
+  font-weight: 600;
+}
+
+.sidebar-section p {
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin: 0.5em 0;
+  opacity: 0.95;
+}
+
+.sidebar-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.sidebar-section li {
+  padding: 0.3em 0;
+  opacity: 0.95;
+}
+
+.sidebar-section .education-item {
+  margin-bottom: 1em;
+}
+
+.sidebar-section .education-item .degree {
+  font-weight: 600;
+  font-size: 0.95em;
+}
+
+.sidebar-section .education-item .institution {
+  font-size: 0.85em;
+  opacity: 0.85;
+  margin-top: 0.2em;
+}
+
 .profile-content {
   flex: 1;
+}
+
+/* Intro text styling */
+.intro-text {
+  font-size: 1.05em;
+  line-height: 1.7;
+  margin-bottom: 2em;
+}
+
+.intro-text p {
+  margin: 1em 0;
+}
+
+/* Project feature blocks */
+.project-feature {
+  margin: 2em 0;
+}
+
+.project-feature h3 {
+  color: #1a1a1a;
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+  border: none;
+}
+
+.project-tagline {
+  font-size: 1.1em;
+  color: #57606a;
+  margin: 0.5em 0 1.5em 0;
+}
+
+.project-feature h4 {
+  color: #1a1a1a;
+  font-size: 1.2em;
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+}
+
+.highlight-list {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0;
+}
+
+.highlight-list li {
+  padding: 0.5em 0;
+  line-height: 1.6;
+}
+
+/* Footer text */
+.footer-text {
+  text-align: center;
+  margin-top: 3em;
+  padding-top: 2em;
+  border-top: 2px solid #e5e8eb;
+  color: #57606a;
 }
 
 .profile-section {
