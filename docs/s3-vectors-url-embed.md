@@ -14,6 +14,7 @@ This project provides a complete terraform template to deploy everything you nee
 
 - [View Code on GitHub](https://github.com/cakeisgoodforyou/s3-vectors-url-embed) 
 - [See Architecture](s3-vectors-url-embed-architecture)
+
 ---
 
 ## Key Features
