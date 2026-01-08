@@ -1,0 +1,49 @@
+{"statusCode": 200, "body": "{\"files_created\": 5, \"errors\": [], \"results\": [{\"s3_key\": \"docs_stripe_com/api/authentication/authentication_7990edb2_20260108.txt\", \"size_bytes\": 916, \"is_part\": false, \"part_info\": \"1/1\"}, {\"s3_key\": \"docs_stripe_com/api/authentication/errors_7990edb2_20260108.txt\", \"size_bytes\": 2585, \"is_part\": false, \"part_info\": \"1/1\"}, {\"s3_key\": \"docs_stripe_com/api/authentication/handling-errors_7990edb2_20260108.txt\", \"size_bytes\": 280, \"is_part\": false, \"part_info\": \"1/1\"}, {\"s3_key\": \"docs_stripe_com/api/authentication/expanding-responses_7990edb2_20260108.txt\", \"size_bytes\": 1826, \"is_part\": false, \"part_info\": \"1/1\"}, {\"s3_key\": \"docs_stripe_com/api/authentication/idempotent-requests_7990edb2_20260108.txt\", \"size_bytes\": 1857, \"is_part\": false, \"part_info\": \"1/1\"}]}"}
+
+
+
+
+
+terraform apply -replace="null_resource.create_vector_index" -replace="aws_s3vectors_vector_bucket.s3_vectors_url_embed_vector_store" -replace="aws_bedrockagent_knowledge_base.api_docs"
+
+
+
+
+
+
+s3vectors-embed query \
+  --vector-bucket-name s3-vectors-url-embed-dev-vectors \
+  --index-name s3-vectors-url-embed-dev-vectors-index \
+  --model-id amazon.titan-embed-text-v2:0 \
+  --text-value "how do I authenticate with stripe" \
+  --k 3 
+
+
+
+s3vectors-embed query \
+  --vector-bucket-name s3-vectors-url-embed-dev-vectors \
+  --index-name s3-vectors-url-embed-dev-vectors-index \
+  --model-id amazon.titan-embed-text-v2:0 \
+  --text "s3://s3-vectors-url-embed-dev-api-docs/docs_stripe_com/api/authentication/handling-errors_7990edb2_20260108.txt" \
+  --k 3 
+
+
+
+s3vectors-embed query --help
+
+
+aws s3vectors query-vectors --vector-bucket-name s3-vectors-url-embed-dev-vectors \
+  --index-name s3-vectors-url-embed-dev-vectors-index \
+  --index-arn "arn:aws:s3vectors:us-east-1:347874331167:bucket/s3-vectors-url-embed-dev-vectors/index/s3-vectors-url-embed-dev-vectors-index" \
+  --query-vector "authentication" \
+  --top-k 1
+
+    # -- "authentication" \
+           query-vectors
+          [--vector-bucket-name <value>]
+          [--index-name <value>]
+          [--index-arn <value>]
+          --top-k <value>
+          --query-vector <value>
+          [--filter <value>]
+          [--return-metadata | --no-return-metadata]q
