@@ -1,14 +1,6 @@
 title: "Andy Clynes (CakeIsGoodForYou) • GitHub Examples"
+description: "Production-ready infrastructure and AI engineering projects"
 theme: jekyll-theme-minimal
 
-# Optional: Add your info
 author: Andy Clynes
-email: cakeisgoodforyou123@gmail.com
-
-# Custom styling
-header_pages:
-  - index.md
-
-# Remove default blue color
-sass:
-  style: compressed
+email: email@gmail.com
