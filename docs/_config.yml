@@ -1,2 +1,14 @@
-title: About Me (Andy Clynes)
-theme: jekyll-theme-primer
+title: "Andy Clynes (CakeIsGoodForYou) • GitHub Examples"
+theme: jekyll-theme-minimal
+
+# Optional: Add your info
+author: Andy Clynes
+email: cakeisgoodforyou123@gmail.com
+
+# Custom styling
+header_pages:
+  - index.md
+
+# Remove default blue color
+sass:
+  style: compressed
