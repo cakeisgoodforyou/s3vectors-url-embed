@@ -3,6 +3,8 @@ layout: default
 title: Home
 ---
 
+## About Me
+
 My name is Andy Clynes and I am a data, analytics, devOps and GenAI professional with over 10 years industry experience.
 Starting in data analytics and data science I later transitioned into data engineering and then again into operations engineering / devOps
 in order to get the complete end-to-end data and analytics stack experience.
