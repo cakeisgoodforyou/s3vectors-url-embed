@@ -107,4 +107,6 @@ outputs/
 
 # other doc folders
 X_SCRAP/
-s3vectors-url-embed/src/lambda/fetch_docs/dependencies/
+src/lambda/fetch_docs/dependencies/
+builds/
+documentation/
