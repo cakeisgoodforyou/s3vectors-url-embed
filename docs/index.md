@@ -3,8 +3,6 @@ layout: default
 title: Home
 ---
 
-# About Me (Andy Clynes)
-
 My name is Andy Clynes and I am a data, analytics, devOps and GenAI professional with over 10 years industry experience.
 Starting in data analytics and data science I later transitioned into data engineering and then again into operations engineering / devOps
 in order to get the complete end-to-end data and analytics stack experience.
@@ -18,7 +16,7 @@ Recently I have also expanded into AI engineering and this page is designed to s
 
 ### s3vectors-url-embed
 
-**A Complete Infrastructure as Code Deployment for a RAG Vector Store Using AWS Bedrock and s3 Vectors.
+**A Complete Infrastructure as Code Deployment for a RAG Vector Store Using AWS Bedrock and s3 Vectors.**
 
 ### Highlights
 - 💥 Automatically retrieve, process, and embed web docs / URLS for RAG systems 
