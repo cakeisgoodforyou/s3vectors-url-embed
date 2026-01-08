@@ -149,18 +149,8 @@ Claude generates answer
 
 **Tradeoff**: Newer feature (Dec 2024), less documentation
 
-### Why Split at 400KB?
-**Problem**: Files >500KB cause Bedrock sync failures due to 2KB metadata limit
-
-**Solution**: Pre-split to 400KB ensures:
-- Each file has manageable metadata
-- Bedrock chunks don't inherit excessive metadata
-- Sync completes reliably
-
-**Context Preservation**: Headers included in each part so embeddings understand context
-
 ### Why Plain Text?
-**Problem**: HTML/JSON fragments in embeddings produce unusable results
+**Problem**: HTML/JSON fragments in embeddings produce difficult to intepret results
 
 **Solution**: 
 - Extract main content only
@@ -176,6 +166,8 @@ Claude generates answer
 - `x-amz-bedrock-kb-source-uri` (long S3 paths)
 - `x-amz-bedrock-kb-chunk-id` (UUIDs)
 - `S3VECTORS-EMBED-SRC-CONTENT` (content previews)
+- `AMAZON_BEDROCK_METADATA`
+- `AMAZON_BEDROCK_TEXT`
 
 **Impact**: Enables reliable sync without metadata overflow
 
@@ -212,13 +204,13 @@ s3://bucket/
 - In-transit: TLS 1.2+
 
 ### IAM Policies
-- **Least Privilege**: Each role has minimal required permissions
+- **Least Privilege**:  Each role has minimal required permissions
 - **Resource Scoping**: Policies reference specific buckets/models
-- **Trust Policies**: Restrict by account ID and source ARN
+- **Trust Policies**:   Restrict by account ID and source ARN
 
 ### Network
-- S3: Private (VPC endpoints possible)
-- Lambda: No VPC needed (uses public endpoints)
+- S3:      Private (VPC endpoints possible)
+- Lambda:  No VPC needed (uses public endpoints)
 - Bedrock: AWS managed, private
 
 ### Secrets
@@ -261,55 +253,6 @@ s3://bucket/
 
 ---
 
-## Cost Breakdown
-
-### Development Environment
-| Service | Usage | Cost/Month |
-|---------|-------|------------|
-| Lambda | 100 invocations | $0.02 |
-| Lambda Duration | 1000 GB-seconds | $0.17 |
-| S3 (docs) | 1GB | $0.023 |
-| S3 Vectors | 2GB | $0.046 |
-| Titan Embeddings | 1M tokens | $0.20 |
-| **Total** | | **$0.46** |
-
-### Production Scale (100GB docs)
-| Service | Cost/Month |
-|---------|------------|
-| S3 Vectors | $2.30 |
-| Lambda | $2.00 |
-| Embeddings | $20.00 |
-| **Total** | **$24.30** |
-
-vs OpenSearch: **$35-40 minimum**
-
----
-
-## Trade-offs
-
-### S3 Vectors
-**Pros**: Massive cost savings, auto-scaling  
-**Cons**: New feature, limited documentation
-
-### Pre-splitting Files
-**Pros**: Reliable sync, predictable metadata  
-**Cons**: More files to manage, complexity
-
-### Plain Text Only
-**Pros**: Clean embeddings, better retrieval  
-**Cons**: Loses some formatting context
-
----
-
-## Future Considerations
-
-- **Multi-region**: Deploy to multiple regions for lower latency
-- **Incremental sync**: Track document changes, skip unchanged
-- **PDF support**: Extend to non-HTML documents
-- **Cost alerts**: CloudWatch alarms for budget overruns
-- **Automated testing**: Integration tests for reliability
-
----
 
 [← Back to Project](s3-vectors-url-embed) | [Home](index)
 
