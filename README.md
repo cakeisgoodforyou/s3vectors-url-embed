@@ -1,7 +1,5 @@
----
-layout: default
-title: S3 Vectors URL Embed
----
+Check out my GitHub Pages blog for a full writeup:  
+https://cakeisgoodforyou.github.io/gh-pages-and-documentation/
 
 # S3 Vectors URL Embed
 
@@ -13,7 +11,7 @@ By using the recently released (Dec 2024) S3 Vectors which offers pay-per-GB sto
 This project provides a complete terraform template to deploy everything you need for a Bedrock knowledge base backed by s3 Vectors.
 
 - [View Code on GitHub](https://github.com/cakeisgoodforyou/s3-vectors-url-embed) 
-- [See Architecture](s3-vectors-url-embed-architecture)
+- [See Architecture](https://cakeisgoodforyou.github.io/gh-pages-and-documentation/s3-vectors-url-embed-architecture)
 
 ---
 
